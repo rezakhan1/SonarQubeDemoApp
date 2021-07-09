@@ -17,9 +17,9 @@ namespace BlazorAdmin.Pages.CatalogItemPage
         [Microsoft.AspNetCore.Components.Inject]
         public ICatalogTypeService CatalogTypeService { get; set; }
 
-        private List<CatalogItem> catalogItems = new List<CatalogItem>();
+        private List<CatalogItem> catalogItems = new();
         private List<CatalogType> catalogTypes = new List<CatalogType>();
-        private List<CatalogBrand> catalogBrands = new List<CatalogBrand>();
+        private List<CatalogBrand> catalogBrands = new();
 
         private Edit EditComponent { get; set; }
         private Delete DeleteComponent { get; set; }
@@ -40,7 +40,7 @@ namespace BlazorAdmin.Pages.CatalogItemPage
             await base.OnAfterRenderAsync(firstRender);
         }
 
-        private async void DetailsClick(int id)
+        private async Task DetailsClick(int id)
         {
             await DetailsComponent.Open(id);
         }
