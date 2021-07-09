@@ -8,7 +8,7 @@ namespace Microsoft.eShopWeb.ApplicationCore.Entities.BuyerAggregate
     {
         public string IdentityGuid { get; private set; }
 
-        private List<PaymentMethod> _paymentMethods = new List<PaymentMethod>();
+        private readonly List<PaymentMethod> _paymentMethods = new List<PaymentMethod>();
 
         public IEnumerable<PaymentMethod> PaymentMethods => _paymentMethods.AsReadOnly();
 
