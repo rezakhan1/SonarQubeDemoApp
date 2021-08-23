@@ -32,6 +32,7 @@ namespace Microsoft.eShopWeb.PublicApi.CatalogItemEndpoints
             Description = "Creates a new Catalog Item",
             OperationId = "catalog-items.create",
             Tags = new[] { "CatalogItemEndpoints" })
+
         ]
         public override async Task<ActionResult<CreateCatalogItemResponse>> HandleAsync(CreateCatalogItemRequest request, CancellationToken cancellationToken)
         {
